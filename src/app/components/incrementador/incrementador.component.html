@@ -1,0 +1,14 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-primary" type="button" id="button-addon1" (click)="cambiarValor(-5)">
+      <i class="mdi mdi-minus"></i>
+    </button>
+  </div>
+  <input type="text" class="form-control" name="porcentaje" [(ngModel)]="porcentaje" placeholder=""
+         aria-label="Example text with button addon" aria-describedby="button-addon1">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button" id="button-addon2" (click)="cambiarValor(+5)">
+      <i class="mdi mdi-plus"></i>
+    </button>
+  </div>
+</div>
