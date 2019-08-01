@@ -2,13 +2,13 @@
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Barra de progreso</h4>
+        <h4 class="card-title">Barra de progreso - {{progreso1}}</h4>
         <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="porcentaje" aria-valuenow=""  aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje + '%'" ></div>
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.ariaValuenow]="progreso1" aria-valuenow=""  aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'" ></div>
         </div>
         <br>
         <div class="progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="porcentaje" aria-valuenow=""  aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje + '%'" ></div>
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="progreso2" aria-valuenow=""  aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'" ></div>
         </div>
       </div>
     </div>
@@ -19,26 +19,14 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <!--<div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <button class="btn btn-primary" type="button" id="button-addon1" (click)="cambiarValor(-5)">
-              <i class="mdi mdi-minus"></i>
-            </button>
-          </div>
-          <input type="text" class="form-control" name="porcentaje" [(ngModel)]="porcentaje" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="button-addon2" (click)="cambiarValor(+5)">
-              <i class="mdi mdi-plus"></i>
-            </button>
-          </div>
-        </div>-->
+        <app-incrementador (cambioValor)="progreso1 = $event" nombre="Blue Progress" [porcentaje]="progreso1"  ></app-incrementador>
       </div>
     </div>
   </div>
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        text 2
+        <app-incrementador (cambioValor)="progreso2 = $event" nombre="Green Progress" [porcentaje]="progreso2"></app-incrementador>
       </div>
     </div>
   </div>
