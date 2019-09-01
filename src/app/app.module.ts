@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import {ServiceModule} from './services/service.module';
+import {PipesModule} from './pipes/pipes.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {ServiceModule} from './services/service.module';
     PagesModule,
     FormsModule,
     ReactiveFormsModule,
-    ServiceModule
+    ServiceModule,
+    PipesModule
   ],
   providers: [],
   exports: [

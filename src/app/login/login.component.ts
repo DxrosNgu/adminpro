@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
      // const profile = googleUser.getBasicProfile();
       const token = googleUser.Zi.id_token;
       this.usuarioService.loginGoogle(token).subscribe(res => {
-       // window.location.href = '#/dashboard';
-        this.router.navigate(['/dashboard']) ;
+        window.location.href = '#/dashboard';
+       // this.router.navigate(['/dashboard']) ;
         }
       );
     });
