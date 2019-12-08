@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 import {Usuario} from '../../models/usuario.model';
 import {SubirArchivoService} from '../../services/subir-archivo/subir-archivo.service';
 import {ModalUploadService} from './modal-upload.service';
