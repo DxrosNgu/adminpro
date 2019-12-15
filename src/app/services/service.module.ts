@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {
+  AdminGuard,
   HospitalService,
   LoginGuardGuard,
   MedicoService,
@@ -27,6 +28,7 @@ import {ModalUploadService} from '../components/modal-upload/modal-upload.servic
     UsuarioService,
     SubirArchivoService,
     LoginGuardGuard,
+    AdminGuard,
     ModalUploadService,
     HospitalService,
     MedicoService

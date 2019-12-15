@@ -70,7 +70,7 @@ export class HospitalService {
   }
 
   buscarHospital(termino: string) {
-    const url = URL_SERVICIOS + '/coleccion/Hospital/' + termino;
+    const url = URL_SERVICIOS + '/busqueda/coleccion/Hospital/' + termino;
     return this.http.get(url)
       .pipe(map( (resp: any) =>  resp.Hospital
       ));

@@ -35,7 +35,7 @@ export class MedicoService {
   }
 
   buscarMedicos(termino: string) {
-    const url = URL_SERVICIOS + '/coleccion/Medico/' + termino;
+    const url = URL_SERVICIOS + '/busqueda/coleccion/Medico/' + termino;
     return this.http.get(url)
       .pipe(map( (resp: any) => resp.Medico));
   }

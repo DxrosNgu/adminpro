@@ -3,6 +3,7 @@ import {MedicoService} from './medico/medico.service';
 export {SubirArchivoService} from './subir-archivo/subir-archivo.service';
 
 export {LoginGuardGuard} from './guards/login-guard.guard';
+export {AdminGuard} from './guards/admin.guard';
 
 export {SettingsService} from './settings/settings.service';
 export { SharedService} from  './shared/shared.service';
