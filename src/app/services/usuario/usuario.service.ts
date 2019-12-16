@@ -21,6 +21,23 @@ export class UsuarioService {
               public router: Router,
               public subirArchivoService: SubirArchivoService) { this.loadToken(); }
 
+  renuevaToken() {
+    let url = URL_SERVICIOS + '/login/renuevatoken';
+    url += '?token=' + this.token;
+    return this.http.get(url).pipe(
+      map((resp: any) => {
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        console.log('Token renovado');
+        return true;
+      }),
+      catchError(err => {
+        this.router.navigate(['/login']);
+        Swal.fire('Error al renovar token', err.mensaje, 'error');
+        return throwError(err);
+      })
+    );
+  }
   LogOut() {
     this.usuario = null;
     this.token = '';

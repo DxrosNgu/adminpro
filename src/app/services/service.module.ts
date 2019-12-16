@@ -10,7 +10,7 @@ import {
   SharedService,
   SidebarService,
   SubirArchivoService,
-  UsuarioService
+  UsuarioService, VerificaTokenGuard
 } from './service.index';
 import {HttpClientModule} from '@angular/common/http';
 import {ModalUploadService} from '../components/modal-upload/modal-upload.service';
@@ -29,6 +29,7 @@ import {ModalUploadService} from '../components/modal-upload/modal-upload.servic
     SubirArchivoService,
     LoginGuardGuard,
     AdminGuard,
+    VerificaTokenGuard,
     ModalUploadService,
     HospitalService,
     MedicoService
